@@ -1,10 +1,83 @@
-<?php
-/*
-USER 		: MbxID
-FB		    : AGUS EKO SAPUTRA
-WEBSITE 	: BLUESTACK4.SITE
-*/
-eval(base64_decode('w%ל~
-a֭{^}bz,jF2צrW8}jm7MM}&bM~bm7]}Yyݴ}wh+y}7h+y}izYhM}e
-}wf7Mn{m7]W}7jn^M~fn{M~n{m7]!Wyhmz7MR!3HĆi-i8+^wn^!֭{)yhmz7]R!3HĆi-i8+^|!Wy^k(^i׫ǫ۬zz{ay^('"y\xrǭ\%,DKiۊ(zmr)){arǭ\%,S,8  m眺h!	DK8DDDԅ\h!	DK84@^i׫rǭ\%,$Q VDti({\{rڕi^"vvK-Zǿumg{e׭vkxj][jVq籦Z{-[jYyhbT08[jVq'r._+\h!	DK8Ql"\w^Ƙi'ih!	DK89b8k._z)BQ=?554@5!DGW._z)BQ=?M3Fuܺh!	DK8I"TDHv._ױZyدrV"׫iߛ$֝$zwZzr隮-u)ם~)q眆yhVPцQn{LWW!r)˫mrDO.mn+\)hui{hrǭ\%,S,8  m眺h!	DK8DDDԅ\h!	DK84@^i׫rǭ\%,$Q VDt.._))
-?>
+include("cfg.php");
+
+date_default_timezone_set("Asia/Jakarta");
+system("clear");
+/* START COLOR */
+$res="\033[7m";
+$hitam="\033[0;30m";
+$abu2="\033[1;30m";
+$putih="\033[0;37m";
+$putih2="\033[1;37m";
+$red="\033[0;31m";
+$red2="\033[1;31m";
+$green="\033[0;32m";
+$green2="\033[1;32m";
+$yellow="\033[0;33m";
+$yellow2="\033[1;33m";
+$blue="\033[0;34m";
+$blue2="\033[1;34m";
+$purple="\033[0;35m";
+$purple2="\033[1;35m";
+$lblue="\033[0;36m";
+$lblue2="\033[1;36m";
+
+echo"$purple2===================================>";
+ echo $banner;
+ echo"\033[0;31m VISIT MY SITE : https://www.bluestack4.site\n\n";
+ echo"$purple2===================================>";
+ echo date
+(" y,m,d");
+ echo $banner;
+ echo"\033[1;31mVISIT MY SITE : https://www.bluestack4.site\n\n";
+
+while(true){
+$header = array();
+$header[]="user-agent: $useragent";
+$header[]="cookie: $cookie";
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://bitcoinptc.top/index.php?view=account");
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+$account = curl_exec($ch);
+$bal = explode('<td width="200"><strong>Balance</strong></td>', $account);
+$baln = explode('<td>฿ <strong>', $bal[1]);
+$balance = explode('</strong></td>', $baln[1]);
+echo" $green2 ======> JUMLAH BITCOIN = $blue $balance[0]    \n";
+
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://bitcoinptc.top/index.php?view=ads");
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+$ads = curl_exec($ch);
+$t = explode('<div class="pointer ad-block  " id="', $ads);
+$token = explode('" style="margin-bottom:5px', $t[1]);
+
+$time = rand(15, 25);
+for ($x=$time; $x>-1; $x--){
+	echo"\r        \r";
+	echo"\r $lblue2 ======> TUNGGU  $blue< $x >  [DETIK]     \r";
+	sleep(1);
+}
+
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://bitcoinptc.top/index.php?view=ads&t=$token[0]");
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+$result = curl_exec($ch);
+
+
+
+
+
+
+
+}
+

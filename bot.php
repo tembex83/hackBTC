@@ -58,7 +58,7 @@ $ads = curl_exec($ch);
 $t = explode('<div class="pointer ad-block  " id="', $ads);
 $token = explode('" style="margin-bottom:5px', $t[1]);
 
-$time = rand(3);
+$time = rand(5,10);
 for ($x=$time; $x>-1; $x--){
 	echo"\r        \r";
 	echo"\r $lblue2 ======> Wait  $blue< $x >  [Seconds]     \r";

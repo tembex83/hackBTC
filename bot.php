@@ -1,3 +1,11 @@
+<?php
+/*
+----------------------------------------------
+Author    : MR.BADUT
+subrek    : https://youtube.com/channel/UCeF2uN-UjIOmHK0ddqLPGxw
+----------------------------------------------
+*/
+
 include("cfg.php");
 
 date_default_timezone_set("Asia/Jakarta");
@@ -22,13 +30,9 @@ $lblue="\033[0;36m";
 $lblue2="\033[1;36m";
 
 echo"$purple2===================================>";
- echo $banner;
- echo"\033[0;31m VISIT MY SITE : https://www.bluestack4.site\n\n";
  echo"$purple2===================================>";
  echo date
 (" y,m,d");
- echo $banner;
- echo"\033[1;31mVISIT MY SITE : https://www.bluestack4.site\n\n";
 
 while(true){
 $header = array();
@@ -81,3 +85,11 @@ $result = curl_exec($ch);
 
 }
 
+
+
+
+
+
+
+
+?>

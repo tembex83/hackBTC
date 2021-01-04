@@ -1,8 +1,8 @@
 <?php
 /*
 ----------------------------------------------
-Author    : MR.BADUT
-subrek    : https://youtube.com/channel/UCeF2uN-UjIOmHK0ddqLPGxw
+Author    : mbxid
+Website    : bluestack4.site
 ----------------------------------------------
 */
 eval(base64_decode('w%ל~

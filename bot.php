@@ -45,7 +45,7 @@ $account = curl_exec($ch);
 $bal = explode('<td width="200"><strong>Balance</strong></td>', $account);
 $baln = explode('<td>฿ <strong>', $bal[1]);
 $balance = explode('</strong></td>', $baln[1]);
-echo" $green2 ======> JUMLAH BITCOIN = $blue $balance[0]    \n";
+echo" $green2 ======> Your BITCOIN = $blue $balance[0]    \n";
 
 
 $ch = curl_init();
@@ -61,7 +61,7 @@ $token = explode('" style="margin-bottom:5px', $t[1]);
 $time = rand(15, 25);
 for ($x=$time; $x>-1; $x--){
 	echo"\r        \r";
-	echo"\r $lblue2 ======> TUNGGU  $blue< $x >  [DETIK]     \r";
+	echo"\r $lblue2 ======> Wait  $blue< $x >  [Seconds]     \r";
 	sleep(1);
 }
 
